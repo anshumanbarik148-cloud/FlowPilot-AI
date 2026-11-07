@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "es2023",
+    "lib": ["ES2023", "DOM"],
+    "module": "esnext",
+    "types": ["vite/client", "node"],
+    "allowArbitraryExtensions": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "paths": {
+      "@/*": ["./frontend/*"],
+      "@/components/ui/*": ["./frontend/ui/*"],
+      "@/components/layout/*": ["./frontend/layout/*"],
+      "@/components/studios/*": ["./frontend/layout/Studios/*"],
+      "@/components/ThemeToggle": ["./frontend/ui/ThemeToggle.tsx"],
+      "@/components/StatusBadge": ["./frontend/ui/statusBadge.tsx"],
+      "@/lib/utils": ["./frontend/lib/utils.ts"],
+      "lucide-react": ["./frontend/lib/lucide-react.tsx"],
+      "lucide-react-upstream": ["./node_modules/lucide-react/dist/lucide-react.d.ts"],
+      "recharts": ["./frontend/lib/rechart.tsx"],
+      "recharts-upstream": ["./node_modules/recharts/types/index.d.ts"]
+    },
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "noUnusedLocals": false,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true
+  },
+    "include": ["main.tsx", "frontend"]
+}
